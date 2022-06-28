@@ -1,0 +1,53 @@
+{
+	"info": {
+		"_postman_id": "498397cb-98f5-4ee8-90d9-03cc7614eb4b",
+		"name": "SmartHrms",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://fcm.googleapis.com/fcm/send",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json;charset=UTF-8",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "key=",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\t\r\n    \"notification\": {\r\n        \"content_available\": true,\r\n        \"icon\": \"app_icon_local_notification\",\r\n        \"sound\": \"default\",\r\n        \"alert\": true\r\n    },\r\n    \"priority\": \"high\",\r\n    \"data\": {\r\n        \"notification_types\": \"\",\r\n        \"click_action\": \"FLUTTER_NOTIFICATION_CLICK\"\r\n    },\r\n    \"to\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fcm.googleapis.com/fcm/send",
+					"protocol": "https",
+					"host": [
+						"fcm",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"fcm",
+						"send"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
